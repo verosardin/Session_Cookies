@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<title>Tu color</title>
+	<link rel="stylesheet" href="/css/app.css">
+</head>
+<body <% if (color) {%>
+	class="<%= color %>"
+	<%}%> >
+	<% if (color) { %>
+		<h1>El color que te gusta es el: <%= color %>, puedes <a href="/">modificarlo</a> si quieres.</h1>
+	<% } else { %>
+		<h1>Aún no has elegido un color. ¿Qué te parece si <a href="/"> lo elegís</a>?</h1>
+	<% } %>
+</body>
+</html>

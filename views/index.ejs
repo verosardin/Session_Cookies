@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vero Sardin Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body <% if (color) {%>
+  class="<%= color%>"
+  <% } %>
+  <% if (colorCookie) {%>
+    class="<%= colorCookie %>"
+  <% } %>>
+
+  <h1>¡Bienvenido!</h1>
+	<% if (color) { %>
+		<p>El color elegido es: <%= color%></p>
+  <% }%>
+
+    <form method="POST" action="/">
+      <h1>Selecciona tu color de perfil</h1>
+      <select name="color" id="color">
+        <option value="" selected disabled hidden>Colores</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="azul">Azul</option>
+        <option value="rojo">Rojo</option>
+        <option value="verde">Verde</option>
+      </select> <br><br>
+      <label>Recordar el color elegido</label>
+      <input type="checkbox" name="recordar_color">
+      <br><br>
+      <input type="submit" value="Enviar">
+      <br><br>
+    <a class="link" href="/borrar">Olvidar el color</a>
+    <a class="link" href="/queColorEs">Ver el color te gusta</a>
+    </form>
+  </body>
+</html>
